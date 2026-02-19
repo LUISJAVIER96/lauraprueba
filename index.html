@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HR Dashboard - Modern &amp; Friendly</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13b6ec",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#101d22",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display">
+<div class="flex min-h-screen">
+<!-- Side Navigation -->
+<aside class="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-800 flex flex-col hidden lg:flex">
+<div class="p-6 flex items-center gap-3">
+<div class="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl">bubble_chart</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-white leading-none">Nexus HR</h1>
+</div>
+<nav class="flex-1 px-4 space-y-2 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 bg-primary/10 text-primary rounded-xl font-semibold" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span>Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">group</span>
+<span>Empleados</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">schedule</span>
+<span>Asistencia</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">bar_chart</span>
+<span>Reportes</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Configuración</span>
+</a>
+</nav>
+<div class="p-6 border-t border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-200 overflow-hidden" data-alt="Avatar of HR Manager female" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDhfcFi3zgqcn5-_lVULbR3wIMWVsfPOn59LY2UTqGhe1bTCn_RSQgujpng7S1NyYrWW_vPYrTcee8ATj1reCBZmjd31yVtyjD5PMRM4yZuNHJ6Eijg6yN4ud9UoI7JaXr0tqASXWMTphPuVVPVGUkqmsJByRG-8Cw9L5BbRtwXXrT50SfTWSVzSR9gd9SiA7krmOKBJsvJhJvcbSgQT9oqPd6KcKyUQitXklo8ggSC3iJSaSCL1LdZ4a8agYjdq6aZo3ngMl-TxBk'); background-size: cover;"></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold leading-none">Sofía Pérez</span>
+<span class="text-xs text-slate-500">HR Manager</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-6 lg:p-10 space-y-8 max-w-7xl mx-auto w-full">
+<!-- Header Section -->
+<header class="flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h2 class="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white">Panel de Control</h2>
+<p class="text-slate-500">Bienvenida de nuevo, Sofía. Así va el día de hoy.</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="pl-10 pr-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm focus:ring-primary focus:border-primary w-64" placeholder="Buscar..." type="text"/>
+</div>
+<button class="w-10 h-10 flex items-center justify-center bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-slate-500 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-red-500 rounded-full"></span>
+</button>
+</div>
+</header>
+<!-- Metric Cards -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Total Employees -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-blue-50 dark:bg-blue-900/20 text-blue-500 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">group</span>
+</div>
+<span class="text-xs font-bold text-blue-500 px-2 py-1 bg-blue-50 dark:bg-blue-900/30 rounded-lg">+12%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Total empleados</p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-1">1,240</h3>
+</div>
+<!-- Attendance Today -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-500 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<span class="text-xs font-bold text-emerald-500 px-2 py-1 bg-emerald-50 dark:bg-emerald-900/30 rounded-lg">95.5%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Asistencias hoy</p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-1">1,185</h3>
+</div>
+<!-- Late Arrivals -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-amber-50 dark:bg-amber-900/20 text-amber-500 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">history</span>
+</div>
+<span class="text-xs font-bold text-amber-500 px-2 py-1 bg-amber-50 dark:bg-amber-900/30 rounded-lg">3.4%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Retardos</p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-1">42</h3>
+</div>
+<!-- Absences -->
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 bg-rose-50 dark:bg-rose-900/20 text-rose-500 rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined">error</span>
+</div>
+<span class="text-xs font-bold text-rose-500 px-2 py-1 bg-rose-50 dark:bg-rose-900/30 rounded-lg">1.1%</span>
+</div>
+<p class="text-slate-500 text-sm font-medium">Faltas</p>
+<h3 class="text-2xl font-bold text-slate-900 dark:text-white mt-1">13</h3>
+</div>
+</section>
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+<!-- Left: Gender Distribution -->
+<section class="xl:col-span-1 space-y-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm flex flex-col h-full">
+<div class="flex items-center justify-between mb-8">
+<h3 class="text-lg font-bold">Distribución de Género</h3>
+<span class="material-symbols-outlined text-slate-400">more_vert</span>
+</div>
+<div class="flex-1 flex flex-col justify-center items-center">
+<div class="relative w-48 h-48 mb-8">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 36 36">
+<circle class="stroke-slate-100 dark:stroke-slate-800" cx="18" cy="18" fill="transparent" r="16" stroke-width="4"></circle>
+<circle class="stroke-primary" cx="18" cy="18" fill="transparent" r="16" stroke-dasharray="65, 100" stroke-linecap="round" stroke-width="4"></circle>
+<circle class="stroke-rose-400" cx="18" cy="18" fill="transparent" r="16" stroke-dasharray="35, 100" stroke-dashoffset="-65" stroke-linecap="round" stroke-width="4"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="text-3xl font-bold">1,240</span>
+<span class="text-xs text-slate-500 uppercase tracking-widest">Total</span>
+</div>
+</div>
+<div class="w-full space-y-4">
+<div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">male</span>
+</div>
+<span class="font-medium">Hombres</span>
+</div>
+<span class="font-bold">65%</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-slate-50 dark:bg-slate-800/50 rounded-xl">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-rose-50 text-rose-500 flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">female</span>
+</div>
+<span class="font-medium">Mujeres</span>
+</div>
+<span class="font-bold">35%</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Right: Attendance Table -->
+<section class="xl:col-span-2 space-y-6">
+<div class="bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-100 dark:border-slate-800 shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-bold">Asistencia Reciente</h3>
+<button class="text-primary text-sm font-semibold hover:underline">Ver todo</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full">
+<thead class="border-b border-slate-100 dark:border-slate-800 text-slate-400 text-xs font-bold uppercase tracking-wider text-left">
+<tr>
+<th class="pb-4 px-2">Empleado</th>
+<th class="pb-4 px-2">Departamento</th>
+<th class="pb-4 px-2">Entrada</th>
+<th class="pb-4 px-2">Estatus</th>
+<th class="pb-4 px-2">Acción</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-50 dark:divide-slate-800">
+<tr class="group hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="py-4 px-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 overflow-hidden" data-alt="Avatar of male employee" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8IVGgIPSJEG-UneJaNY9Wz4vNGGtbP1KW-xPnlZMMS4hBwkkM6XKcYCI9crKsSyP8yrFVDZy0Ut2qae4SUVIw-NLuaeWbPGBQqDTBl9tEkDmh5wNZPZcLaaUuyUGfkSvqZWMG6J357GeI_M5i6zJZmGxy2QLyegpDpddjkAhMYchf91KKUorHpw6MW9-xOuGHXghBZdeweOM6tr6rGayYlahDA4JipCAf9aeTukSFXXsub4VnspBuAHmQ1a4Ps0-N8ZulNp6HpyU'); background-size: cover;"></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Carlos Mendoza</span>
+<span class="text-xs text-slate-400">carlos.m@company.com</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-2 text-sm text-slate-600 dark:text-slate-400">Marketing</td>
+<td class="py-4 px-2 text-sm font-medium">08:05 AM</td>
+<td class="py-4 px-2">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400">
+                                                Asistencia
+                                            </span>
+</td>
+<td class="py-4 px-2">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">visibility</button>
+</td>
+</tr>
+<tr class="group hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="py-4 px-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 overflow-hidden" data-alt="Avatar of female employee" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBRmaoSy9WUD3Xt8FgbPwT_INX-4jbggyoFbEnblsQheRzEi_7u67uolmoZ7gpOAaeyXakxM4IY0XDmWvGWAbg6OTvt2dMBE4hv2YsBCthT8IrvVPvIcNNONx8sPYQoeGKldSEgaiNHEJovbEAwmJuUSTgCUnwMNCxl32L4wJdKeaXEb9e9XB6P-JinvesjWJCoesnnNp4FoRf36VUhb5FzcSs37i_bXl0kMMuBg0EWqTIykC2Zf5J0bUJz5TXuUHcl7YeaGp-Vs2Q'); background-size: cover;"></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Lucía Torres</span>
+<span class="text-xs text-slate-400">lucia.t@company.com</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-2 text-sm text-slate-600 dark:text-slate-400">Desarrollo</td>
+<td class="py-4 px-2 text-sm font-medium">09:15 AM</td>
+<td class="py-4 px-2">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-amber-50 text-amber-600 dark:bg-amber-900/30 dark:text-amber-400">
+                                                Retardo
+                                            </span>
+</td>
+<td class="py-4 px-2">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">visibility</button>
+</td>
+</tr>
+<tr class="group hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="py-4 px-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 overflow-hidden" data-alt="Avatar of male employee" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBLROYFnXPcFtUnwsWWffp00_yT54Yx-B2kwG-Qg-1yDoESJSsrMmPUPSIkzNMTwsreTs2aH-uf3ZCKpJDFmx05OF3iLRC0Drl-DhfFY8F7siZmfNixTFDFXbujwaVAWHgwaYdiyumk5rMo6HgreACFz9Ktb1zijnJ51UvAGr0bhDHv1r97RwmNf8bcu0T7Sdp_J8oeFIzv525iV_sTAIp1jcVAQDEZFR4hDH43yLjvx2YGJj9IqK9rR3LO54i7teJhPngeC5zjFUQ'); background-size: cover;"></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Roberto Díaz</span>
+<span class="text-xs text-slate-400">roberto.d@company.com</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-2 text-sm text-slate-600 dark:text-slate-400">Ventas</td>
+<td class="py-4 px-2 text-sm font-medium">--:--</td>
+<td class="py-4 px-2">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-rose-50 text-rose-600 dark:bg-rose-900/30 dark:text-rose-400">
+                                                Falta
+                                            </span>
+</td>
+<td class="py-4 px-2">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">visibility</button>
+</td>
+</tr>
+<tr class="group hover:bg-slate-50/50 dark:hover:bg-slate-800/30 transition-colors">
+<td class="py-4 px-2">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-slate-100 overflow-hidden" data-alt="Avatar of female employee" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7lZTAXMZoknOj0GJonI9D6QmKU1qcXC67Arwq7v21Sf_a1q_iV7rpyskwEmpGKTmOs4oV2XR9Jyt-UMyqwL4JUUTjdY0MkAgwJWYzLx5cOOMENj1mytS5YMc23A9A5Ra-jcXxsqRylpXBN6kQ5VcWbfdbm8LTjAm8kQbywRmSZsZw9M4RDkM3qyTvX4QChk8G3psL9pg_igJcPR7h4b4Hazjw19Y8XuKSF_e3BpxKQUVroE3p1QaAvldRbwu3rdoTY4yh6fGTBIo'); background-size: cover;"></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold">Elena Rivas</span>
+<span class="text-xs text-slate-400">elena.r@company.com</span>
+</div>
+</div>
+</td>
+<td class="py-4 px-2 text-sm text-slate-600 dark:text-slate-400">Finanzas</td>
+<td class="py-4 px-2 text-sm font-medium">07:58 AM</td>
+<td class="py-4 px-2">
+<span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-50 text-emerald-600 dark:bg-emerald-900/30 dark:text-emerald-400">
+                                                Asistencia
+                                            </span>
+</td>
+<td class="py-4 px-2">
+<button class="material-symbols-outlined text-slate-400 hover:text-primary transition-colors">visibility</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>
